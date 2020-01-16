@@ -46,5 +46,8 @@ export default new Vuex.Store({
   mutations: {
   },
   getters: {
+    bytesUntilLevelUp: state => {
+      return Math.round(state.player.nextLevel - state.totalBytes);
+    }
   }
 })
