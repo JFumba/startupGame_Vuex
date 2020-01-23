@@ -14,11 +14,17 @@ export default {
   },
   methods: {
     coding () {
-      // Do Something
+      this.$store.commit('incrementBytes', this.$store.state.bpk);
     },
     loop () {
       // Game Loop
+      this.levelManager();
       requestAnimationFrame(this.loop);
+    },
+    levelManager () {
+      if (this.$store.getters.bytesUntilLevelUp <= 0) {
+        this.$store.commit('levelUp');
+      }      
     }
   },
   created () {
