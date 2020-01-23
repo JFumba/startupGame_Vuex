@@ -50,7 +50,7 @@ export default new Vuex.Store({
     },
     levelUp: state => {
       state.player.level++;
-      state.player.nextlevel *= state.player.increase;
+      state.player.nextLevel *= state.player.increase;
     }
   },
   getters: {
