@@ -1,16 +1,19 @@
 <template>
   <div id="game">
     <Overview />
+    <Upgrades />
   </div>
 </template>
 
 <script>
 import Overview from './components/Overview';
+import Upgrades from './components/Upgrades';
 
 export default {
   name: 'app',
   components: {
-    Overview
+    Overview,
+    Upgrades
   },
   methods: {
     coding () {
