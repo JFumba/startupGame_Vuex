@@ -21,6 +21,7 @@ export default {
     },
     loop () {
       // Game Loop
+      this.$store.commit('bytesPerSecond');
       this.levelManager();
       requestAnimationFrame(this.loop);
     },
